@@ -1,6 +1,6 @@
-# node-react-boilerplate
+# Ash's portfolio
 
-Node and React boilerplate for easy deployment to Heroku
+Forked from the boilerplate `node-react-template`
 
 ### Bolierplate Includes
 

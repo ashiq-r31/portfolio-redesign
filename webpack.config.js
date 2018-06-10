@@ -16,7 +16,7 @@ module.exports = {
           presets: [
             'react',
             'stage-0',
-            ['env', { targets: { browsers: ['last 2 versions'] } } ]
+            ['env', { targets: { browsers: ['last 2 versions'] } }]
           ]
         }
       },
@@ -27,6 +27,14 @@ module.exports = {
           'css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
           'sass-loader'
         ]
+      },
+      {
+        test: /\.css$/,
+        loaders: [
+          'style-loader',
+          'css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
+        ],
+        include: /flexboxgrid/
       }
     ]
   }

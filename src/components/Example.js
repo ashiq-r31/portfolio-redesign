@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
+import Project from './Project'
 
 const Example = () => {
   return (
@@ -30,14 +31,20 @@ const Example = () => {
 
               <Row>
                 <Col lg={12}>
-                  <h1 style={{
-                    marginTop: 200,
-                    color: 'white',
-                    fontWeight: 600,
-                    fontSize: 60,
-                    textAlign: 'center'
-                  }}>I craft beautiful products <br />
-                    & memorable experiences</h1>
+                  <div style={{
+                    height: '75vh',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center'
+                  }}>
+                    <h1 style={{
+                      color: 'white',
+                      fontWeight: 600,
+                      fontSize: 72,
+                      textAlign: 'center'
+                    }}>I craft beautiful products <br />
+                      & memorable experiences</h1>
+                  </div>
                 </Col>
               </Row>
             </div>
@@ -47,18 +54,10 @@ const Example = () => {
           <Grid>
             <Row>
               <Col lg={6}>
-                <div style={{
-                  backgroundColor: '#ffbcb8',
-                  padding: 24
-                }}>
-                  <h2 style={{
-                    color: '#f44336',
-                    fontWeight: 600,
-                    fontSize: 30,
-                    lineHeight: '8px'
-                  }}>Verizon</h2>
-                  <p style={{ fontSize: 18 }}>Creating tools for the cloud</p>
-
+                <Project
+                  theme='#D52B1E'
+                  title='Verizon'
+                  description='Building tools for the cloud platform'>
                   <div style={{ display: 'flex', justifyContent: 'center' }}>
                     <img src='/images/hah-preview.png' style={{
                       position: 'relative',
@@ -66,22 +65,14 @@ const Example = () => {
                       top: 24
                     }} />
                   </div>
-                </div>
+                </Project>
               </Col>
 
               <Col lg={6}>
-                <div style={{
-                  backgroundColor: '#B4E8D4',
-                  padding: 24
-                }}>
-                  <h2 style={{
-                    color: '#009688',
-                    fontWeight: 600,
-                    fontSize: 30,
-                    lineHeight: '8px'
-                  }}>Health at Hand</h2>
-                  <p style={{ fontSize: 18 }}>Disrupting healthcare in the Middle East</p>
-
+                <Project
+                  theme='#61c9a1'
+                  title='Health at hand'
+                  description='Disrupting healthcare in the Middle East'>
                   <div style={{ display: 'flex', justifyContent: 'center' }}>
                     <img src='/images/hah-preview.png' style={{
                       position: 'relative',
@@ -89,7 +80,7 @@ const Example = () => {
                       top: 24
                     }} />
                   </div>
-                </div>
+                </Project>
               </Col>
             </Row>
           </Grid>

@@ -26590,6 +26590,10 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactFlexboxGrid = __webpack_require__(126);
 
+var _Project = __webpack_require__(261);
+
+var _Project2 = _interopRequireDefault(_Project);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Example = function Example() {
@@ -26654,17 +26658,25 @@ var Example = function Example() {
                 _reactFlexboxGrid.Col,
                 { lg: 12 },
                 _react2.default.createElement(
-                  'h1',
+                  'div',
                   { style: {
-                      marginTop: 200,
-                      color: 'white',
-                      fontWeight: 600,
-                      fontSize: 60,
-                      textAlign: 'center'
+                      height: '75vh',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center'
                     } },
-                  'I craft beautiful products ',
-                  _react2.default.createElement('br', null),
-                  '& memorable experiences'
+                  _react2.default.createElement(
+                    'h1',
+                    { style: {
+                        color: 'white',
+                        fontWeight: 600,
+                        fontSize: 72,
+                        textAlign: 'center'
+                      } },
+                    'I craft beautiful products ',
+                    _react2.default.createElement('br', null),
+                    '& memorable experiences'
+                  )
                 )
               )
             )
@@ -26684,26 +26696,11 @@ var Example = function Example() {
               _reactFlexboxGrid.Col,
               { lg: 6 },
               _react2.default.createElement(
-                'div',
-                { style: {
-                    backgroundColor: '#ffbcb8',
-                    padding: 24
-                  } },
-                _react2.default.createElement(
-                  'h2',
-                  { style: {
-                      color: '#f44336',
-                      fontWeight: 600,
-                      fontSize: 30,
-                      lineHeight: '8px'
-                    } },
-                  'Verizon'
-                ),
-                _react2.default.createElement(
-                  'p',
-                  { style: { fontSize: 18 } },
-                  'Creating tools for the cloud'
-                ),
+                _Project2.default,
+                {
+                  theme: '#D52B1E',
+                  title: 'Verizon',
+                  description: 'Building tools for the cloud platform' },
                 _react2.default.createElement(
                   'div',
                   { style: { display: 'flex', justifyContent: 'center' } },
@@ -26719,26 +26716,11 @@ var Example = function Example() {
               _reactFlexboxGrid.Col,
               { lg: 6 },
               _react2.default.createElement(
-                'div',
-                { style: {
-                    backgroundColor: '#B4E8D4',
-                    padding: 24
-                  } },
-                _react2.default.createElement(
-                  'h2',
-                  { style: {
-                      color: '#009688',
-                      fontWeight: 600,
-                      fontSize: 30,
-                      lineHeight: '8px'
-                    } },
-                  'Health at Hand'
-                ),
-                _react2.default.createElement(
-                  'p',
-                  { style: { fontSize: 18 } },
-                  'Disrupting healthcare in the Middle East'
-                ),
+                _Project2.default,
+                {
+                  theme: '#61c9a1',
+                  title: 'Health at hand',
+                  description: 'Disrupting healthcare in the Middle East' },
                 _react2.default.createElement(
                   'div',
                   { style: { display: 'flex', justifyContent: 'center' } },
@@ -31952,6 +31934,58 @@ exports.push([module.i, ".src-components-___Example2__test___2jNmE {\n  color: b
 exports.locals = {
 	"test": "src-components-___Example2__test___2jNmE"
 };
+
+/***/ }),
+/* 261 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Project = function Project(_ref) {
+  var theme = _ref.theme,
+      title = _ref.title,
+      description = _ref.description,
+      children = _ref.children;
+  return _react2.default.createElement(
+    'div',
+    { style: {
+        backgroundColor: theme,
+        padding: 24
+      } },
+    _react2.default.createElement(
+      'h2',
+      { style: {
+          color: 'white',
+          fontWeight: 600,
+          fontSize: 30,
+          lineHeight: '8px'
+        } },
+      title
+    ),
+    _react2.default.createElement(
+      'p',
+      { style: {
+          fontSize: 18,
+          color: 'rgba(255, 255, 255, 0.75)'
+        } },
+      description
+    ),
+    children
+  );
+};
+
+exports.default = Project;
 
 /***/ })
 /******/ ]);
